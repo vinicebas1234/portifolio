@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Projetos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .project-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .project-list li {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+        .project-list h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .project-list p {
+            margin: 10px 0;
+        }
+        .project-list a {
+            color: #0077b5; /* Cor padrão do LinkedIn */
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-list a:hover {
+            text-decoration: underline;
+        }
+        .pdf-link {
+            display: block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+        .pdf-link:hover {
+            background-color: #d0d0d0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,16 +57,17 @@
     </header>
     <main>
         <h1>Meus Projetos</h1>
-        <ul>
+        <ul class="project-list">
             <li>
-                <h2>Projeto 1</h2>
-                <p>Descrição do Projeto 1.</p>
+                <h2>Terra Tech</h2>
+                <p> Esse projeto de faculdade foi desenhado para a utilidade da agricultura inteligente chamado de Terra Tech.</p>
+                <a class="pdf-link" href="{{ url_for('static', filename='pdfs/terratech.pdf') }}" target="_blank">Baixar PDF do Terra Tech</a>
             </li>
             <li>
-                <h2>Projeto 2</h2>
-                <p>Descrição do Projeto 2.</p>
+                <h2>Combat V.2</h2>
+                <p> Este projeto Combat V.2. foi um projeto de faculdade, para uma competição de robos de combate.</p>
+                <a class="pdf-link" href="{{ url_for('static', filename='pdfs/combatv2.pdf') }}" target="_blank">Baixar PDF do Combat V.2</a>
             </li>
-            <!-- Adicione mais projetos conforme necessário -->
         </ul>
     </main>
     <footer>
